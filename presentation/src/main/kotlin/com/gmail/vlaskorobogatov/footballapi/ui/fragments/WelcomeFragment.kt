@@ -26,11 +26,11 @@ class WelcomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.welcomeMatchesButton.setOnClickListener {
-            view.findNavController().navigate(R.id.matches_fragment)
+            view.findNavController().navigate(R.id.welcome_to_matches_action)
         }
 
         binding.welcomeWebViewButton.setOnClickListener {
-            view.findNavController().navigate(R.id.web_view_fragment)
+            view.findNavController().navigate(R.id.welcome_to_web_view_action)
         }
     }
 }

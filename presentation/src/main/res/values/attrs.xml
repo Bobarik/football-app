@@ -2,8 +2,13 @@
 <resources>
 
     <declare-styleable name="BaseFootballAppTheme">
-        <attr format="reference" name="default_transition_enter" />
-        <attr format="reference" name="default_transition_exit" />
+        <declare-styleable name="NavAction">
+        <attr name="enterAnim" format="reference"/>
+        <attr name="exitAnim" format="reference"/>
+        <attr name="popEnterAnim" format="reference"/>
+        <attr name="popExitAnim" format="reference"/>
+    </declare-styleable>
+
     </declare-styleable>
 
     <declare-styleable name="FootballAppTheme">

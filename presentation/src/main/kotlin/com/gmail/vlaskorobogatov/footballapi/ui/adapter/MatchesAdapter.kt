@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.gmail.vlaskorobogatov.football_app.R
 import com.gmail.vlaskorobogatov.football_app.databinding.MatchCardLayoutBinding
 import com.gmail.vlaskorobogatov.footballapi.model.Match
 
@@ -28,7 +29,8 @@ class MatchesAdapter : ListAdapter<Match, MatchViewHolder>(MatchDiffCallback()) 
     }
 }
 
-class MatchViewHolder(private val viewBinding: MatchCardLayoutBinding) : RecyclerView.ViewHolder(viewBinding.root) {
+class MatchViewHolder(private val viewBinding: MatchCardLayoutBinding) :
+    RecyclerView.ViewHolder(viewBinding.root) {
 
     fun bindItems(match: Match) {
         with(viewBinding) {
@@ -41,13 +43,20 @@ class MatchViewHolder(private val viewBinding: MatchCardLayoutBinding) : Recycle
             if (match.leagueLogo.isBlank())
                 leagueIcon.isVisible = false
             else
-                leagueIcon.load(match.leagueLogo)
+                leagueIcon.load(match.leagueLogo) {
+                    placeholder(R.drawable.soccer_logo)
+                }
 
-            awayTeamBadge.load(match.awayTeam.badge)
+            awayTeamBadge.load(match.awayTeam.badge) {
+                placeholder(R.drawable.soccer_logo)
+            }
             awayTeamName.text = match.awayTeam.name
             awayTeamScore.text = match.awayTeam.score
 
-            homeTeamBadge.load(match.homeTeam.badge)
+            homeTeamBadge.load(match.homeTeam.badge) {
+                placeholder(R.drawable.soccer_logo)
+                error(R.drawable.soccer_logo)
+            }
             homeTeamName.text = match.homeTeam.name
             homeTeamScore.text = match.homeTeam.score
         }
