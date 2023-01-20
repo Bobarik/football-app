@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.FootballApp.TextView" parent="Widget.AppCompat.TextView" >
+        <item name="android:lineSpacingMultiplier">1.22</item>
+        <item name="android:textAppearance">@style/TextAppearance.FootballApp.Base.Medium</item>
+    </style>
+</resources>

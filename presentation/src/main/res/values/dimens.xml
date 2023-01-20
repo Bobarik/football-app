@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text0">24sp</dimen>
+    <dimen name="text1">20sp</dimen>
+    <dimen name="text2">16sp</dimen>
+    <dimen name="text3">14sp</dimen>
+    <dimen name="text4">12sp</dimen>
+    <dimen name="margin1">16dp</dimen>
+    <dimen name="margin2">8dp</dimen>
+    <dimen name="logoSize">40dp</dimen>
+    <dimen name="icon_size">20dp</dimen>
+    <dimen name="card_corner">32dp</dimen>
+
+    <dimen name="spacing_1dp">1dp</dimen>
+    <dimen name="spacing_2dp">2dp</dimen>
+    <dimen name="spacing_xxsmall">4dp</dimen>
+    <dimen name="spacing_xsmall">6dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_12dp">12dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_xxlarge">32dp</dimen>
+
+    <dimen name="text_size_xsmall">12sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_xlarge">24sp</dimen>
+    <dimen name="text_size_xxlarge">32sp</dimen>
+    <dimen name="text_size_xxxlarge">40sp</dimen>
+
+    <dimen name="button_vertical_padding">20dp</dimen>
+    <dimen name="button_bottom_spacing">38dp</dimen>
+    <dimen name="button_corners">2dp</dimen>
+
+    <dimen name="cursor_size">1dp</dimen>
+
+    <dimen name="button_text_size">16sp</dimen>
+    <dimen name="custom_edit_text_size">32sp</dimen>
+</resources>

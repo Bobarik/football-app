@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bank_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin1"
+    android:layout_marginTop="@dimen/margin1"
+    app:cardCornerRadius="@dimen/card_corner">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/league_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin1"
+            android:layout_marginStart="@dimen/margin1"
+            android:layout_marginTop="@dimen/margin1"
+            android:textSize="@dimen/text1"
+            app:layout_constraintEnd_toStartOf="@id/match_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="League stuff" />
+
+        <TextView
+            android:id="@+id/stage_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin1"
+            android:layout_marginTop="@dimen/margin2"
+            android:textSize="@dimen/text2"
+            app:layout_constraintStart_toStartOf="@id/league_name"
+            app:layout_constraintTop_toBottomOf="@id/league_name"
+            app:layout_constraintEnd_toStartOf="@id/match_info"
+            tools:text="Finals" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/match_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin1"
+            android:layout_marginTop="@dimen/margin1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/league_icon"
+                android:layout_width="@dimen/logoSize"
+                android:layout_height="@dimen/logoSize"
+                android:contentDescription="@string/league_logo"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/match_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin1"
+                android:textSize="@dimen/text2"
+                app:layout_constraintEnd_toStartOf="@id/league_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="12-12-2022" />
+
+            <TextView
+                android:id="@+id/match_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin1"
+                android:layout_marginTop="@dimen/margin2"
+                android:textSize="@dimen/text2"
+                app:layout_constraintEnd_toStartOf="@id/league_icon"
+                app:layout_constraintTop_toBottomOf="@id/match_date"
+                tools:text="12:30" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/upper_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin1"
+            app:layout_constraintTop_toBottomOf="@id/stage_name" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/home_team_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin1"
+            app:layout_constraintTop_toBottomOf="@id/upper_divider">
+
+            <TextView
+                android:id="@+id/home_team_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin1"
+                app:layout_constraintBottom_toBottomOf="@id/home_team_badge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/home_team_badge"
+                tools:text="Manchester United" />
+
+
+            <TextView
+                android:id="@+id/home_team_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin1"
+                android:layout_marginStart="@dimen/margin1"
+                app:layout_constraintBottom_toBottomOf="@id/home_team_badge"
+                app:layout_constraintEnd_toStartOf="@id/home_team_badge"
+                app:layout_constraintTop_toTopOf="@id/home_team_badge"
+                tools:text="3 (4)" />
+
+            <ImageView
+                android:id="@+id/home_team_badge"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="@dimen/margin1"
+                android:contentDescription="@string/home_team_badge"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/away_team_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin1"
+            app:layout_constraintTop_toBottomOf="@id/home_team_info">
+
+            <TextView
+                android:id="@+id/away_team_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin1"
+                app:layout_constraintBottom_toBottomOf="@id/away_team_badge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/away_team_badge"
+                tools:text="Barcelona" />
+
+            <TextView
+                android:id="@+id/away_team_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin1"
+                android:layout_marginStart="@dimen/margin1"
+                app:layout_constraintBottom_toBottomOf="@id/away_team_badge"
+                app:layout_constraintEnd_toStartOf="@id/away_team_badge"
+                app:layout_constraintTop_toTopOf="@id/away_team_badge"
+                tools:text="3 (1)" />
+
+            <ImageView
+                android:id="@+id/away_team_badge"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="@dimen/margin1"
+                android:contentDescription="@string/away_team_badge"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/match_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin1"
+            android:layout_marginTop="@dimen/margin1"
+            android:textSize="@dimen/text2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/away_team_info"
+            tools:text="Finished" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

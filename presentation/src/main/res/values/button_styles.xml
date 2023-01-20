@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.FootballApp.Button.Filled" parent="Widget.MaterialComponents.Button">
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:paddingTop">@dimen/button_vertical_padding</item>
+        <item name="android:paddingBottom">@dimen/button_vertical_padding</item>
+        <item name="android:textAppearance">@style/TextAppearance.FootballApp.Base.Medium.Bold</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="Widget.FootballApp.Button.Text" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textAppearance">@style/TextAppearance.FootballApp.Base.Medium.Bold</item>
+        <item name="android:paddingTop">@dimen/button_vertical_padding</item>
+        <item name="android:paddingBottom">@dimen/button_vertical_padding</item>
+        <item name="android:backgroundTint">?android:colorBackground</item>
+    </style>
+</resources>

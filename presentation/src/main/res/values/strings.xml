@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">football-app</string>
+    <string name="preloader_text">Подгрузка матчей</string>
+    <string name="away_team_badge">Away team badge</string>
+    <string name="home_team_badge">Home team badge</string>
+    <string name="league_logo">League logo</string>
+    <string name="welcome_matches_button">Список Матчей</string>
+    <string name="welcome_site_button">Посетите наш сайт!</string>
 </resources>

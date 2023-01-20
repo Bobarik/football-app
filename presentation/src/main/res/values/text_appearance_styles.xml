@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.FootballApp" parent="TextAppearance.AppCompat" />
+
+    <style name="TextAppearance.FootballApp.Base">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="TextAppearance.FootballApp.Base.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/roboto_bold_700</item>
+    </style>
+
+    <style name="TextAppearance.FootballApp.Base.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="TextAppearance.FootballApp.Base.Medium">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="TextAppearance.FootballApp.Base.Small">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="TextAppearance.FootballApp.Base.Large.Bold" parent="TextAppearance.FootballApp.Base.Bold">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="TextAppearance.FootballApp.Base.TitleLarge.Bold" parent="TextAppearance.FootballApp.Base.Bold">
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+    </style>
+
+    <style name="TextAppearance.FootballApp.Base.Medium.Bold" parent="TextAppearance.FootballApp.Base.Bold">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+</resources>

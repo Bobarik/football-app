@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BaseFootballAppTheme">
+        <attr format="reference" name="default_transition_enter" />
+        <attr format="reference" name="default_transition_exit" />
+    </declare-styleable>
+
+    <declare-styleable name="FootballAppTheme">
+        <attr format="color" name="placeholderColor" />
+    </declare-styleable>
+</resources>

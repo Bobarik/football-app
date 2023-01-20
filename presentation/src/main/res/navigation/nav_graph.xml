@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcome_fragment">
+
+    <fragment
+        android:id="@+id/matches_fragment"
+        android:label="Main"
+        android:name="com.gmail.vlaskorobogatov.footballapi.ui.fragments.MatchesFragment"
+        tools:layout="@layout/matches_fragment_layout" />
+
+    <fragment
+        android:id="@+id/welcome_fragment"
+        android:label="Main"
+        android:name="com.gmail.vlaskorobogatov.footballapi.ui.fragments.WelcomeFragment"
+        tools:layout="@layout/welcome_fragment_layout">
+
+        <action
+            android:id="@+id/welcome_to_matches_action"
+            app:destination="@id/matches_fragment" />
+        <action
+            android:id="@+id/welcome_to_web_view_action"
+            app:destination="@id/web_view_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/web_view_fragment"
+        android:label="Main"
+        android:name="com.gmail.vlaskorobogatov.footballapi.ui.fragments.WebViewFragment"
+        tools:layout="@layout/web_view_layout" />
+</navigation>
