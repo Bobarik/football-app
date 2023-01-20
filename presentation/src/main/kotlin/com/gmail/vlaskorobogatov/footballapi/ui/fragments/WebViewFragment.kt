@@ -38,19 +38,6 @@ class WebViewFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = WebViewLayoutBinding.inflate(layoutInflater)
-
-        val callback: OnBackPressedCallback =
-            object : OnBackPressedCallback(true /* enabled by default */) {
-                override fun handleOnBackPressed() {
-                    if (binding.webView.canGoBack()) {
-                        binding.webView.goBack()
-                    } else {
-                        findNavController().navigateUp()
-                    }
-                }
-            }
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
-
         return binding.root
     }
 
@@ -62,12 +49,27 @@ class WebViewFragment : Fragment() {
             binding.webView.restoreState(savedInstanceState)
         } else {
             binding.webView.loadUrl("https://apifootball.com/")
-            with(binding.webView.settings) {
-                javaScriptEnabled = true
-                setSupportZoom(true)
-            }
-            binding.webView.webViewClient = FootballWebViewClient()
         }
+        with(binding.webView.settings) {
+            javaScriptEnabled = true
+            setSupportZoom(true)
+        }
+        binding.webView.webViewClient = FootballWebViewClient()
+        addBackpressCallback()
+    }
+
+    private fun addBackpressCallback() {
+        val callback: OnBackPressedCallback =
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    if (binding.webView.canGoBack()) {
+                        binding.webView.goBack()
+                    } else {
+                        findNavController().navigateUp()
+                    }
+                }
+            }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

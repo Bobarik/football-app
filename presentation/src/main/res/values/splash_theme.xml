@@ -3,7 +3,7 @@
     <!-- Splash Screen Theme. -->
     <style name="Theme.FootballSplash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/purple_700</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/soccer_logo</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_inset</item>
         <item name="windowSplashScreenAnimationDuration">300</item>
         <item name="postSplashScreenTheme">@style/Theme.FootballApp</item>
     </style>
